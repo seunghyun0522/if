@@ -1,13 +1,18 @@
 import { Routes, Route, Outlet } from "react-router-dom";
+import { reset } from "styled-reset";
 import Main from "./routes/Main";
 import Login from "./routes/Login";
 import Signup from "./routes/Signup";
 import MyLibrary from "./routes/MyLibrary";
 import BookCalendar from "./routes/BookCalendar";
 import ScheduleCalendar from "./routes/ScheduleCalendar";
+import { createGlobalStyle } from "styled-components";
 function App() {
+  const GlobalStyle = createGlobalStyle`
+  ${reset}`;
   return (
     <div>
+      <GlobalStyle />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />

@@ -11,7 +11,7 @@ const StyledNavbar = styled.ul`
   justify-content: flex-end;
   height: 100%;
   list-style: none;
-
+  margin-top: 20px;
   border-bottom: 1px solid #a1a1a1;
   padding-bottom: 20px;
 `;
@@ -28,33 +28,6 @@ const NavbarLink = styled(Link)`
   border-radius: 100px;
 `;
 
-const TitleList = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 48px;
-`;
-const AppTitle = styled.span`
-  color: #000;
-  text-align: center;
-  font-family: Inter;
-  font-size: 49px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-`;
-
-const AppContent = styled.span`
-  color: rgba(85, 85, 85, 0.7);
-  margin-top: 30px;
-  text-align: center;
-  font-family: Inter;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-`;
 function Navbar() {
   return (
     <>
@@ -63,10 +36,6 @@ function Navbar() {
           <NavbarLink to="/Login">Login</NavbarLink>
         </StyledNavItem>
       </StyledNavbar>
-      <TitleList>
-        <AppTitle>앱 이름</AppTitle>
-        <AppContent>앱의 내용과 구체적인 서비스 스토리</AppContent>
-      </TitleList>
     </>
   );
 }
