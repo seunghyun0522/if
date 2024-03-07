@@ -37,10 +37,6 @@
   --padding-x: 0.5em;
 }
 
-input {
-  text-align: center;
-}
-
 .formContainer {
   align-items: center;
   display: flex;
