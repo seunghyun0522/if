@@ -1,13 +1,13 @@
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Main from "./routes/Main";
 import Login from "./routes/Login";
 import Signup from "./routes/Signup";
 import MyLibrary from "./routes/MyLibrary";
-import Ebook from "./routes/Ebook";
+import ServiceNavbar from "./components/ServiceNavbar";
 import BookCalendar from "./routes/BookCalendar";
-import ScheduleCalendar from "./routes/ScheduleCalendar";
+
 import { createGlobalStyle } from "styled-components";
-import { Navbar } from "react-bootstrap";
+
 function App() {
   const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -41,20 +41,10 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route
-          path="/library"
-          element={
-            <div>
-              <Navbar />
-              <Outlet />
-            </div>
-          }
-        >
+        <Route path="/library/" element={<ServiceNavbar />}>
           <Route path="" element={<MyLibrary />} />
-          <Route path="scheduleCalendar" element={<ScheduleCalendar />} />
-          <Route path="bookCalendar" element={<BookCalendar />} />
+          <Route path="calendar" element={<BookCalendar />} />
         </Route>
-
         <Route path="*" element={<div>404</div>} />
       </Routes>
     </div>

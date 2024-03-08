@@ -1,5 +1,5 @@
 function BookCalendar() {
-  return <div>BookCalendar!!</div>;
+  return <></>;
 }
 
 export default BookCalendar;
